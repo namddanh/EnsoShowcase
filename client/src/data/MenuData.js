@@ -1,8 +1,8 @@
 export const menuData = [
-  { title: "Home", link: "/" },
-  { title: "About", link: "/about" },
-  { title: "Submit", link: "/submit" },
-  { title: "Artists", link: "/artists" },
-  { title: "Venue", link: "/venue" },
-  { title: "Contact", link: "/contact" },
+  { title: "HOME", link: "/" },
+  { title: "ABOUT", link: "/about" },
+  { title: "SUBMIT", link: "/submit" },
+  { title: "ARTISTS", link: "/artists" },
+  { title: "VENUE", link: "/venue" },
+  { title: "CONTACT", link: "/contact" },
 ];

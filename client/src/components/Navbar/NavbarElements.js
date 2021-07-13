@@ -59,6 +59,7 @@ export const NavMenu = styled.div`
 
 export const NavMenuLinks = styled(Link)`
   ${NavLink}
+  font-family: 'BenchNine', sans-serif;
 `;
 
 export const NavBtn = styled.div`
