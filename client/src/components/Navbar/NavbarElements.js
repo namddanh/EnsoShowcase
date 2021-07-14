@@ -28,7 +28,6 @@ export const Logo = styled(Link)`
 `;
 
 export const MenuBars = styled(CgMenuRight)`
-  // styled.i
   display: none;
 
   @media screen and (max-width: 768px) {
