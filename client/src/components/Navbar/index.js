@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Nav,
-  Logo,
+  // Logo,
   MenuBars,
   NavMenu,
   NavMenuLinks,
@@ -13,7 +13,7 @@ import { menuData } from "../../data/MenuData.js";
 const Navbar = ({ toggle }) => {
   return (
     <Nav>
-      <Logo to="/">ELIXR</Logo>
+      {/* <Logo to="/">ELIXR</Logo> */}
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
