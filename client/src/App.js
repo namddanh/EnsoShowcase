@@ -1,24 +1,21 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Dropdown from "./components/Dropdown";
-import HeroSection from "./components/HeroSection";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages";
+import ContactPage from "./pages/contact";
 import GlobalStyles from "./globalStyles";
-import { SliderData } from "./data/SliderData";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <>
+    <React.Fragment>
       <GlobalStyles />
-      <Navbar toggle={toggle} />
-      <Dropdown isOpen={isOpen} toggle={toggle} />
-      <HeroSection slides={SliderData} />
-    </>
+      <Router>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/contact" component={ContactPage} exact />
+        </Switch>
+      </Router>
+      {/* <Home /> */}
+    </React.Fragment>
   );
 }
 
