@@ -16,7 +16,7 @@ export const NavLink = css`
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 2rem;
   height: 100%;
   cursor: pointer;
   text-decoration: none;
@@ -48,7 +48,8 @@ export const MenuBars = styled(CgMenuRight)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -48px;
+  // margin-right: -48px;
+  margin: 0 auto;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -58,6 +59,7 @@ export const NavMenu = styled.div`
 export const NavMenuLinks = styled(Link)`
   ${NavLink}
   font-family: 'BenchNine', sans-serif;
+  font-size: 1.5em;
 `;
 
 export const NavBtn = styled.div`

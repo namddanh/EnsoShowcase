@@ -5,7 +5,7 @@ import {
   MenuBars,
   NavMenu,
   NavMenuLinks,
-  NavBtn,
+  // NavBtn,
 } from "./NavbarElements.js";
 import { Button } from "../Button";
 import { menuData } from "../../data/MenuData.js";
@@ -22,11 +22,11 @@ const Navbar = ({ toggle }) => {
           </NavMenuLinks>
         ))}
       </NavMenu>
-      <NavBtn>
+      {/* <NavBtn>
         <Button to="/contact" primary="true">
           Contact
         </Button>
-      </NavBtn>
+      </NavBtn> */}
     </Nav>
   );
 };
