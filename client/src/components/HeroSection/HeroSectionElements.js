@@ -4,7 +4,7 @@ import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 
 export const HeroContainer = styled.section`
   height: 100vh;
-  max-height: 1100px;
+  max-height: 1300px;
   position: relative;
   overflow: hidden;
 `;

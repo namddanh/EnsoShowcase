@@ -7,7 +7,7 @@ import {
   NavMenuLinks,
   // NavBtn,
 } from "./NavbarElements.js";
-import { Button } from "../Button";
+// import { Button } from "../Button";
 import { menuData } from "../../data/MenuData.js";
 
 const Navbar = ({ toggle }) => {
