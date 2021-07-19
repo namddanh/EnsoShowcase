@@ -116,7 +116,7 @@ export const FormInput = styled.input`
 
   ::placeholder {
     color: ${(props) => props.error};
-    opacity: 0.85; /* Firefox */
+    opacity: 1; /* Firefox */
   }
 
   ::-webkit-input-placeholder {

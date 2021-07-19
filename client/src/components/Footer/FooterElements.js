@@ -4,6 +4,10 @@ export const FooterContainer = styled.div`
   height: 120px;
   width: 100%;
   background-color: #1f1f1f;
+
+  @media screen and (max-width: 900px) {
+    height: 90px;
+  }
 `;
 
 export const FooterWrap = styled.div`
@@ -14,6 +18,10 @@ export const FooterWrap = styled.div`
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
+
+  @media screen and (max-width: 900px) {
+    padding: 0;
+  }
 `;
 
 export const FooterLinksContainer = styled.div`
