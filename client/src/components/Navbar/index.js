@@ -1,19 +1,10 @@
 import React from "react";
-import {
-  Nav,
-  // Logo,
-  MenuBars,
-  NavMenu,
-  NavMenuLinks,
-  // NavBtn,
-} from "./NavbarElements.js";
-// import { Button } from "../Button";
+import { Nav, MenuBars, NavMenu, NavMenuLinks } from "./NavbarElements.js";
 import { menuData } from "../../data/MenuData.js";
 
 const Navbar = ({ toggle }) => {
   return (
     <Nav>
-      {/* <Logo to="/">ELIXR</Logo> */}
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
@@ -22,11 +13,6 @@ const Navbar = ({ toggle }) => {
           </NavMenuLinks>
         ))}
       </NavMenu>
-      {/* <NavBtn>
-        <Button to="/contact" primary="true">
-          Contact
-        </Button>
-      </NavBtn> */}
     </Nav>
   );
 };

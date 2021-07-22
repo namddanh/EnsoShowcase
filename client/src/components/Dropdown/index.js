@@ -1,6 +1,5 @@
 import React from "react";
 import { menuData } from "../../data/MenuData";
-// import { Button } from "../Button";
 import {
   DropdownContainer,
   Icon,
@@ -8,7 +7,6 @@ import {
   DropdownWrapper,
   DropdownMenu,
   DropdownLink,
-  //   BtnWrap,
 } from "./DropdownElements";
 
 const Dropdown = ({ isOpen, toggle }) => {
@@ -26,11 +24,6 @@ const Dropdown = ({ isOpen, toggle }) => {
             </DropdownLink>
           ))}
         </DropdownMenu>
-        {/* <BtnWrap>
-          <Button primary="true" round="true" big="true" to="/contact">
-            Contact
-          </Button>
-        </BtnWrap> */}
       </DropdownWrapper>
     </DropdownContainer>
   );

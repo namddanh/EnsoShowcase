@@ -12,21 +12,6 @@ export const Nav = styled.nav`
   width: 100%;
 `;
 
-export const NavLink = css`
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-  height: 100%;
-  cursor: pointer;
-  text-decoration: none;
-`;
-
-export const Logo = styled(Link)`
-  ${NavLink}
-  font-style: italic;
-`;
-
 export const MenuBars = styled(CgMenuRight)`
   display: none;
 
@@ -56,10 +41,28 @@ export const NavMenu = styled.div`
   }
 `;
 
+const NavLink = css`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+`;
+
 export const NavMenuLinks = styled(Link)`
   ${NavLink}
   font-family: 'BenchNine', sans-serif;
   font-size: 1.5em;
+
+  &:hover {
+    color: #e34946;
+  }
+
+  &:active {
+    color: #e34946;
+  }
 `;
 
 export const NavBtn = styled.div`
