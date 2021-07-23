@@ -1,6 +1,8 @@
-import React from "react";
-import { Nav, MenuBars, NavMenu, NavMenuLinks } from "./NavbarElements.js";
+import React, { useState } from "react";
+import { Nav, MenuBars, NavMenu } from "./NavbarElements.js";
+import { NavLink } from "react-router-dom";
 import { menuData } from "../../data/MenuData.js";
+import "./style.css";
 
 const Navbar = ({ toggle }) => {
   return (
@@ -8,9 +10,14 @@ const Navbar = ({ toggle }) => {
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
-          <NavMenuLinks to={item.link} key={index}>
+          <NavLink
+            activeClassName="active"
+            className="main-nav"
+            to={item.link}
+            key={index}
+          >
             {item.title}
-          </NavMenuLinks>
+          </NavLink>
         ))}
       </NavMenu>
     </Nav>

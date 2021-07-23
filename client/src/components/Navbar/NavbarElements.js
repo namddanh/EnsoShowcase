@@ -41,8 +41,7 @@ export const NavMenu = styled.div`
   }
 `;
 
-const NavLink = css`
-  color: #fff;
+export const NavLink = css`
   display: flex;
   align-items: center;
   margin: 0 2rem;
@@ -55,14 +54,7 @@ export const NavMenuLinks = styled(Link)`
   ${NavLink}
   font-family: 'BenchNine', sans-serif;
   font-size: 1.5em;
-
-  &:hover {
-    color: #e34946;
-  }
-
-  &:active {
-    color: #e34946;
-  }
+  color: #fff;
 `;
 
 export const NavBtn = styled.div`

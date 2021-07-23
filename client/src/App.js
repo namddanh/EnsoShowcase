@@ -25,7 +25,7 @@ function App() {
         <Route
           render={({ location }) => (
             <Switch location={location} key={location.pathname}>
-              <Route exact path="/" render={() => <Home />} />
+              <Route exact path="/home" render={() => <Home />} />
 
               <Route exact path="/contact" render={() => <ContactPage />} />
             </Switch>
