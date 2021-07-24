@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //Pages
 import Home from "./pages/index";
+import AboutPage from "./pages/about";
 import ContactPage from "./pages/contact";
 //Components
 import Navbar from "./components/Navbar";
@@ -16,6 +18,11 @@ function App() {
     setIsOpen(!isOpen);
   };
 
+  const imageDetails = {
+    width: 524,
+    height: 650,
+  };
+
   return (
     <React.Fragment>
       <GlobalStyles />
@@ -25,9 +32,34 @@ function App() {
         <Route
           render={({ location }) => (
             <Switch location={location} key={location.pathname}>
-              <Route exact path="/home" render={() => <Home />} />
+              <Route
+                exact
+                path="/"
+                render={() => <Home title="HOME | Enso" />}
+              />
 
-              <Route exact path="/contact" render={() => <ContactPage />} />
+              <Route
+                exact
+                path="/enso"
+                render={() => <Home title="HOME | Enso" />}
+              />
+
+              <Route
+                path="/about"
+                render={() => (
+                  <AboutPage imageDetails={imageDetails} title="ABOUT | Enso" />
+                )}
+              />
+              {/* 
+              <Route
+                path="/about/us"
+                render={() => <AboutPage title="ABOUT | Enso" />}
+              /> */}
+
+              <Route
+                path="/contact"
+                render={() => <ContactPage title="CONTACT | Enso" />}
+              />
             </Switch>
           )}
         />

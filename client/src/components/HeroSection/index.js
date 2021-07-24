@@ -10,8 +10,8 @@ import {
   SliderButtons,
   PrevArrow,
   NextArrow,
+  Button,
 } from "./HeroSectionElements";
-import { Button } from "../Button/index";
 
 const HeroSection = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -59,11 +59,12 @@ const HeroSection = ({ slides }) => {
               {index === current && (
                 <HeroSlider>
                   <HeroImage src={slide.image} alt={slide.alt} />
-                  <HeroContent>
+                  <HeroContent backgroundColor={slide.backgroundColor}>
                     <h1>{slide.title}</h1>
                     <Button
                       to={slide.path}
                       primary="true"
+                      big="true"
                       css={`
                         max-width: 160px;
                       `}

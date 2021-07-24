@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components/macro";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export const HeroContainer = styled.section`
   height: 100vh;
@@ -68,9 +69,13 @@ export const HeroContent = styled.div`
   z-index: 10;
   display: flex;
   flex-direction: column;
-  max-width: 1600px;
-  width: calc(100% - 100px);
+  max-width: 500px;
+  // width: calc(100% - 100px);
   color: #fff;
+
+  height: 300px;
+  width: 300px;
+  background-color: ${(props) => props.backgroundColor};
 
   h1 {
     font-size: clamp(1rem, 8vw, 2rem);
@@ -84,6 +89,28 @@ export const HeroContent = styled.div`
   p {
     margin-bottom: 1rem;
     text-shadow: 0px 0px 20px 2gba (0, 0, 0, 0.4);
+  }
+`;
+
+export const Button = styled(Link)`
+  background: ${({ primary }) => (primary ? "#000d1a" : "#CD853F")};
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  min-width: 100px;
+  max-width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: ${({ big }) => (big ? "16px 40px" : "14px 24px")};
+  color: ${({ primary }) => (primary ? "#fff" : "#000d1a")};
+  font-size: ${({ big }) => (big ? "20px" : "14px")};
+
+  &:hover {
+    transform: translateY(-2px);
   }
 `;
 

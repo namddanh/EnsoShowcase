@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
+import About from "./../components/About";
 import Footer from "../components/Footer";
-import Contact from "../components/Contact";
 
-const ContactPage = ({ title }) => {
+const AboutPage = ({ title }) => {
   useEffect(() => {
     document.title = title;
   });
 
   return (
     <React.Fragment>
-      <Contact />
+      <About />
       <Footer />
     </React.Fragment>
   );
 };
 
-export default ContactPage;
+export default AboutPage;

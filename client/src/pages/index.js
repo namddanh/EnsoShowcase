@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
 import { SliderData } from "../data/SliderData";
 
-const Home = () => {
+const Home = ({ title }) => {
+  useEffect(() => {
+    document.title = title;
+  });
+
   return (
     <React.Fragment>
       <HeroSection slides={SliderData} />

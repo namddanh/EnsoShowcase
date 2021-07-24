@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Nav, MenuBars, NavMenu } from "./NavbarElements.js";
 import { NavLink } from "react-router-dom";
 import { menuData } from "../../data/MenuData.js";
