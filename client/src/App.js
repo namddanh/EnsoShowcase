@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 //Pages
 import Home from "./pages/index";
 import AboutPage from "./pages/about";
@@ -50,11 +50,6 @@ function App() {
                   <AboutPage imageDetails={imageDetails} title="ABOUT | Enso" />
                 )}
               />
-              {/* 
-              <Route
-                path="/about/us"
-                render={() => <AboutPage title="ABOUT | Enso" />}
-              /> */}
 
               <Route
                 path="/contact"
