@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 //Pages
 import Home from "./pages/index";
 import AboutPage from "./pages/about";
+import AboutPageTransition from "./pages/about-transition";
 import ContactPage from "./pages/contact";
 //Components
 import Navbar from "./components/Navbar";
@@ -31,31 +32,36 @@ function App() {
         <Dropdown isOpen={isOpen} toggle={toggle} />
         <Route
           render={({ location }) => (
-            <Switch location={location} key={location.pathname}>
-              <Route
-                exact
-                path="/"
-                render={() => <Home title="HOME | Enso" />}
-              />
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={location} key={location.pathname}>
+                <Route
+                  exact
+                  path="/"
+                  render={() => <Home title="HOME | Enso" />}
+                />
 
-              <Route
-                exact
-                path="/enso"
-                render={() => <Home title="HOME | Enso" />}
-              />
+                <Route
+                  exact
+                  path="/enso"
+                  render={() => <Home title="HOME | Enso" />}
+                />
 
-              <Route
-                path="/about"
-                render={() => (
-                  <AboutPage imageDetails={imageDetails} title="ABOUT | Enso" />
-                )}
-              />
+                <Route
+                  path="/about"
+                  render={() => (
+                    <AboutPageTransition
+                      imageDetails={imageDetails}
+                      title="ABOUT TRANSITION | Enso"
+                    />
+                  )}
+                />
 
-              <Route
-                path="/contact"
-                render={() => <ContactPage title="CONTACT | Enso" />}
-              />
-            </Switch>
+                <Route
+                  path="/contact"
+                  render={() => <ContactPage title="CONTACT | Enso" />}
+                />
+              </Switch>
+            </AnimatePresence>
           )}
         />
       </Router>

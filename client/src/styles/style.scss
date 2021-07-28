@@ -3,6 +3,26 @@ $grey: #bdbdbd;
 $white: #ffffff;
 $black: #1e1f13;
 
+body {
+  padding: 0;
+  margin: 0;
+  // background-color: red;
+  // color: $black;
+
+  &:before {
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+  }
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
 .aboutus-section {
   height: 100vh;
   position: relative;
@@ -146,6 +166,112 @@ main {
             }
           }
         }
+      }
+    }
+  }
+}
+
+//single
+.single {
+  .container {
+    .top-row {
+      height: 50vh;
+      width: 100%;
+      align-items: flex-end;
+      .top {
+        padding-bottom: 40px;
+        .details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .location {
+            span:nth-child(2) {
+              margin-left: 16px;
+            }
+          }
+          .mua {
+            text-transform: uppercase;
+          }
+        }
+        .model {
+          overflow: hidden;
+          .first {
+            margin-right: 72px;
+          }
+          span {
+            display: inline-block;
+            position: relative;
+            font-weight: 400;
+            font-size: 155px;
+            font-family: "Maragsa";
+            color: $grey;
+            @media (max-width: 1440px) {
+              font-size: 128px;
+            }
+          }
+        }
+      }
+    }
+    .bottom-row {
+      height: 50vh;
+      position: relative;
+      .bottom {
+        height: 100%;
+        width: 100%;
+        .thumbnail-single {
+          width: 100%;
+          height: 800px;
+          margin: 0 auto;
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0; // ADDED
+          .frame-single {
+            img {
+              position: absolute;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .scroll-for-more {
+        position: absolute;
+        bottom: 200px;
+        left: 200px;
+        z-index: 20;
+        .icon {
+          svg {
+            height: auto;
+            width: 28px;
+          }
+        }
+        .text {
+          margin-top: 8px;
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.detailed-information {
+  margin-top: 200px;
+  height: 600px;
+  .container {
+    .row {
+      justify-content: space-between;
+      align-items: flex-start;
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        font-family: "Helvetica Neue";
+        font-size: 16;
+        line-height: 28px;
+        font-weight: 400;
+        width: 800px;
       }
     }
   }
